@@ -45,7 +45,7 @@ const winningCombos = [
     [1,4,7],
     [2,5,8],
     [0,4,8],
-    [0,4,6]
+    [2,4,6]
 ]
 function playerHasWon(){
     for (const condition of winningCombos){
@@ -61,7 +61,7 @@ function restart(){
     spaces.fill(null)
 
     boxes.forEach( box =>{
-        box.innerTEXT = ''
+        box.innerText = ''
         box.style.backgroundColor =''
     })
 

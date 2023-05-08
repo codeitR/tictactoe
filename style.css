@@ -29,9 +29,9 @@ h1{
     height: 500px;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 50px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /* align-items: center; */
     
 
@@ -63,4 +63,9 @@ button{
     transition: 200ms transform;
     /* font-weight: 400; */
     /* text-transform: uppercase; */
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
 }
