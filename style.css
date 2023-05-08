@@ -7,7 +7,7 @@
     --winning-blocks: #2d414b;
 }
 body{
-    color: #f2c14b;
+    color: #f70909;
     font-family: 'vardan', sans-serif;
 }
 h1{
@@ -42,8 +42,8 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #f20c0c;
     font-size: 30px;
+    color: rgb(255, 4, 0);
     border-right: 2px solid ;
     border-bottom:2px solid ;
 
@@ -58,9 +58,10 @@ h1{
 button{
     padding: 10px 40px;
     border-radius: 8px;
-    background-color: #f2c14b;
+    /* margin-left:-10px ; */
+    background-color: #e1371d;
     font-size: 18px;
-    transition: 200ms transform;
+    transition: 250ms transform;
     /* font-weight: 400; */
     /* text-transform: uppercase; */
 }
