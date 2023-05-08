@@ -62,5 +62,5 @@ button{
     font-size: 18px;
     transition: 200ms transform;
     /* font-weight: 400; */
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
