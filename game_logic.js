@@ -4,7 +4,7 @@ let boxes = Array.from ( document.getElementsByClassName('box'))
 
 // console.log(boxes)
 
-let winnerIndicator = getComputedStyle(document.body),getPropertyValue ('--winning-blocks')
+let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
 
 const O_TEXT ="O"
 const X_TEXT ="X"
@@ -17,18 +17,19 @@ const startGame = () => {
     boxes.forEach(box => box.addEventListener('click', boxClicked))
 }
 
-function boxClicked(e){
+function boxClicked(e) {
     const id = e.target.id
 
     if(!spaces[id]){
       spaces[id]= currentPlayer  
       e.target.innerText = currentPlayer
       
-      if(playerHasWon () !== false){
-        playerText = '${currentPlayer} has won!'
-        let winning_blocks = playerHasWon()
+      if(playerHasWon() !== false){
 
-        console.log(winning_blocks)
+        playerText.innerHTML = '${currentPlayer} has won!'
+        let winning_blocks = playerHasWon()
+        winning_blocks.map ( box=> boxes [box].style.backgroundColor=winnerIndicator)
+        return
 
       }
 
@@ -61,9 +62,10 @@ function restart(){
 
     boxes.forEach( box =>{
         box.innerTEXT = ''
+        box.style.backgroundColor =''
     })
 
-    playerText = 'Tic Tac Toe'
+    playerText.innerHTML = 'Tic Tac Toe'
     currentPlayer = X_TEXT
 }
 startGame()
